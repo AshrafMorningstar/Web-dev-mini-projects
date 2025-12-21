@@ -3,86 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Todo List Premium - Aurora Theme with Glassmorphism">
-    <title>Todo List Premium - Aurora Edition</title>
+    <meta name="description" content="Todo List Premium - Aurora Theme by Ashraf Morningstar">
+    <meta name="keywords" content="todo list, tasks, aurora theme">
+    <meta name="author" content="Ashraf Morningstar">
+    <title>Todo List Premium - Ashraf Morningstar</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="aurora"></div>
-    <canvas id="particleCanvas"></canvas>
-    
     <div class="container">
-        <header class="header">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>Aurora Tasks</h1>
-                    <p>Organize your dreams</p>
-                </div>
-                <div class="header-controls">
-                    <button class="theme-btn" id="themeBtn">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button class="voice-btn" id="voiceBtn" title="Voice input">
-                        <i class="fas fa-microphone"></i>
-                    </button>
-                </div>
-            </div>
+        <header>
+            <h1>Aurora Tasks</h1>
+            <p class="tagline">Organize Your Dreams</p>
+            <a href="/">Back</a>
         </header>
-
-        <main class="main">
-            <div class="input-section">
-                <div class="input-group glass">
-                    <input type="text" id="taskInput" placeholder="Add a new task..." class="task-input">
-                    <select id="prioritySelect" class="priority-select">
-                        <option value="low">Low Priority</option>
-                        <option value="medium" selected>Medium Priority</option>
-                        <option value="high">High Priority</option>
-                    </select>
-                    <button class="btn-add" id="addBtn">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-layer-group"></i> All
-                </button>
-                <button class="filter-btn" data-filter="active">
-                    <i class="fas fa-circle"></i> Active
-                </button>
-                <button class="filter-btn" data-filter="completed">
-                    <i class="fas fa-check-circle"></i> Completed
-                </button>
-            </div>
-
-            <div class="stats glass">
-                <div class="stat">
-                    <span class="stat-value" id="totalTasks">0</span>
-                    <span class="stat-label">Total Tasks</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-value" id="completedTasks">0</span>
-                    <span class="stat-label">Completed</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-value" id="progressPercent">0%</span>
-                    <span class="stat-label">Progress</span>
-                </div>
-            </div>
-
-            <div class="tasks-container">
-                <div id="tasksList" class="tasks-list"></div>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p>✨ Built with premium design by <a href="https://github.com/AshrafMorningstar">Ashraf Morningstar</a></p>
-        </footer>
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <div id="tasksList" class="tasks-list"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

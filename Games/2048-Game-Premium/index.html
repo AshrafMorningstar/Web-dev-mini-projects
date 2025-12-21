@@ -3,64 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="2048 Game Premium - Glassmorphic UI with Neon Design">
-    <title>2048 Premium - Neon Edition</title>
+    <meta name="description" content="2048 Game Premium - Glassmorphism + Neon Design with Advanced UI">
+    <meta name="keywords" content="2048 game, puzzle, premium ui, glassmorphism">
+    <meta name="author" content="Ashraf Morningstar">
+    <meta name="og:title" content="2048 Game Premium by Ashraf Morningstar">
+    <meta name="og:description" content="Play 2048 with Premium Glassmorphism Design">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@AMS_Morningstar">
+    <title>2048 Game Premium - Ashraf Morningstar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background"></div>
     <canvas id="particleCanvas"></canvas>
-    
-    <div class="container">
-        <div class="header-section">
-            <div class="header-content">
-                <div class="title-group">
-                    <h1 class="title">2048</h1>
-                    <p class="subtitle">Merge tiles • Reach 2048 • Challenge yourself</p>
-                </div>
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
+    <div class="aurora-bg"></div>
+    <div class="scanlines"></div>
 
-            <div class="stats-grid">
-                <div class="stat-card neumorphic">
-                    <span class="stat-label">Current Score</span>
-                    <span class="stat-value glow-text" id="score">0</span>
-                </div>
-                <div class="stat-card neumorphic">
-                    <span class="stat-label">High Score</span>
-                    <span class="stat-value glow-text" id="highScore">0</span>
-                </div>
-                <div class="stat-card neumorphic">
-                    <span class="stat-label">Best Tile</span>
-                    <span class="stat-value glow-text" id="bestTile">2</span>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>2048 PREMIUM</h1>
+                <p class="tagline">Glassmorphism + Neon Edition</p>
+                <div class="header-links">
+                    <a href="/" class="btn-back">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </a>
+                    <a href="https://github.com/AshrafMorningstar" class="btn-github">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
             </div>
-        </div>
+            <div class="header-stats">
+                <div class="stat">
+                    <span class="stat-label">Score</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Best</span>
+                    <span class="stat-value" id="best">0</span>
+                </div>
+            </div>
+        </header>
 
         <div class="game-section">
-            <div class="game-board-container">
-                <div class="game-board glassmorphic" id="gameBoard"></div>
-            </div>
-
-            <div class="controls-section">
+            <div class="game-board" id="gameBoard"></div>
+            <div class="game-controls">
                 <button class="btn btn-primary" id="newGameBtn">
-                    <i class="fas fa-refresh-alt"></i> New Game
+                    <i class="fas fa-redo"></i> New Game
                 </button>
                 <button class="btn btn-secondary" id="undoBtn">
                     <i class="fas fa-undo"></i> Undo
                 </button>
-                <div class="hint-box">
-                    <p>⏫ ⏬ ⏪ ⏩ or WASD to play</p>
-                </div>
+                <button class="btn btn-secondary" id="themeBtn">
+                    <i class="fas fa-moon"></i> Theme
+                </button>
             </div>
         </div>
 
-        <div class="achievement-section">
-            <h3>🏆 Achievements</h3>
-            <div class="achievement-grid" id="achievements"></div>
+        <div class="info-section">
+            <div class="info-card">
+                <h3>How to Play</h3>
+                <ul>
+                    <li>🎮 Use arrow keys or swipe to move tiles</li>
+                    <li>🎯 Combine tiles with the same number</li>
+                    <li>🏆 Reach the 2048 tile to win!</li>
+                    <li>✨ Get high score to beat your best</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Features</h3>
+                <ul>
+                    <li>✨ Glassmorphic UI design</li>
+                    <li>💫 Particle effects on merge</li>
+                    <li>🌈 Neon gradient tiles</li>
+                    <li>📊 Achievement tracking</li>
+                </ul>
+            </div>
         </div>
     </div>
 
