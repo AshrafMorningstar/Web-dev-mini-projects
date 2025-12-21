@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --text-color: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.score-display {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.score-display div {
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cell {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: white;
+    border: 2px solid #bdc3c7;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cell:hover:not(:disabled) {
+    background-color: #ecf0f1;
+    transform: scale(1.05);
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+.cell[data-player="X"] {
+    color: var(--primary-color);
+}
+
+.cell[data-player="O"] {
+    color: var(--danger-color);
+}
+
+.message {
+    text-align: center;
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    min-height: 30px;
+    font-weight: bold;
+}
+
+.btn-reset {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-reset:hover {
+    background-color: #2980b9;
+}
