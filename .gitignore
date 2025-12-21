@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.npm
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testing
+.pytest_cache/
+*.pyc
+__pycache__/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+Thumbs.db
+.DS_Store
