@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BMI Calculator Premium - Neumorphic UI with Health Recommendations">
+    <title>BMI Calculator Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise"></div>
+    
+    <div class="container">
+        <div class="card-neumorphic">
+            <div class="header">
+                <h1>💫 BMI Calculator</h1>
+                <p class="tagline">Your Health at a Glance</p>
+            </div>
+
+            <div class="input-group">
+                <div class="input-field">
+                    <label>Height</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="height" placeholder="170" class="input-neumorphic">
+                        <select id="heightUnit" class="unit-selector">
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Weight</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="weight" placeholder="70" class="input-neumorphic">
+                        <select id="weightUnit" class="unit-selector">
+                            <option value="kg">kg</option>
+                            <option value="lbs">lbs</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-calculate" id="calculateBtn">Calculate BMI</button>
+
+            <div id="result" class="result-section hidden">
+                <div class="bmi-display">
+                    <svg class="bmi-ring" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" class="ring-background"></circle>
+                        <circle id="bmiRing" cx="50" cy="50" r="45" class="ring-progress"></circle>
+                    </svg>
+                    <div class="bmi-value-container">
+                        <span class="bmi-number" id="bmiValue">0</span>
+                        <span class="bmi-unit">BMI</span>
+                    </div>
+                </div>
+
+                <div class="status-card" id="statusCard">
+                    <span class="status-emoji" id="statusEmoji"></span>
+                    <span class="status-text" id="statusText"></span>
+                </div>
+
+                <div class="recommendations">
+                    <h3>🌟 Health Recommendations</h3>
+                    <ul id="recommendationsList" class="recommendation-list"></ul>
+                </div>
+
+                <div class="health-metrics">
+                    <div class="metric-card">
+                        <span class="metric-label">Healthy Weight Range</span>
+                        <span class="metric-value" id="healthyRange">--</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-label">Ideal BMI</span>
+                        <span class="metric-value">18.5-24.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-section" id="historySection" style="display: none;">
+            <h3>📈 BMI History</h3>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
