@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI'; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+.container { max-width: 500px; width: 100%; background: white; border-radius: 15px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+h1 { text-align: center; color: #e91e63; margin-bottom: 30px; }
+.input-group { margin-bottom: 20px; }
+label { display: block; margin-bottom: 10px; font-weight: 600; }
+input[type="date"] { width: 100%; padding: 12px; border: 2px solid #ecf0f1; border-radius: 8px; font-size: 1em; }
+input:focus { outline: none; border-color: #e91e63; }
+.result { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+.age-item { background: linear-gradient(135deg, #e91e63, #9c27b0); padding: 20px; border-radius: 10px; color: white; text-align: center; }
+.age-item span:first-child { display: block; font-size: 0.9em; margin-bottom: 10px; opacity: 0.9; }
+.age-item span:last-child { display: block; font-size: 2em; font-weight: bold; }
+.result.hidden { display: none; }
+p { margin-top: 15px; text-align: center; }
