@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2048 Game Premium - Glassmorphic UI with Neon Design">
+    <title>2048 Premium - Neon Edition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <canvas id="particleCanvas"></canvas>
+    
+    <div class="container">
+        <div class="header-section">
+            <div class="header-content">
+                <div class="title-group">
+                    <h1 class="title">2048</h1>
+                    <p class="subtitle">Merge tiles • Reach 2048 • Challenge yourself</p>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card neumorphic">
+                    <span class="stat-label">Current Score</span>
+                    <span class="stat-value glow-text" id="score">0</span>
+                </div>
+                <div class="stat-card neumorphic">
+                    <span class="stat-label">High Score</span>
+                    <span class="stat-value glow-text" id="highScore">0</span>
+                </div>
+                <div class="stat-card neumorphic">
+                    <span class="stat-label">Best Tile</span>
+                    <span class="stat-value glow-text" id="bestTile">2</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-section">
+            <div class="game-board-container">
+                <div class="game-board glassmorphic" id="gameBoard"></div>
+            </div>
+
+            <div class="controls-section">
+                <button class="btn btn-primary" id="newGameBtn">
+                    <i class="fas fa-refresh-alt"></i> New Game
+                </button>
+                <button class="btn btn-secondary" id="undoBtn">
+                    <i class="fas fa-undo"></i> Undo
+                </button>
+                <div class="hint-box">
+                    <p>⏫ ⏬ ⏪ ⏩ or WASD to play</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achievement-section">
+            <h3>🏆 Achievements</h3>
+            <div class="achievement-grid" id="achievements"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
