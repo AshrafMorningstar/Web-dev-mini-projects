@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Password Generator Premium - Cyberpunk Neon UI with Hacker Theme">
+    <title>Password Generator Premium - Neon Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="rainCanvas"></canvas>
+    <div class="scanlines"></div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="title-box">
+                <h1 class="title">  CIPHER  </h1>
+                <div class="subtitle">PASSWORD GENERATION SYSTEM v2.0</div>
+            </div>
+            <div class="status-indicator">
+                <span class="dot"></span>
+                <span class="status-text">ONLINE</span>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="display-panel">
+                <div class="display-header">
+                    <span class="display-title">[PASSWORD OUTPUT]</span>
+                    <span class="display-time" id="displayTime">00:00:00</span>
+                </div>
+                <div class="password-display" id="passwordDisplay">
+                      > CLICK TO GENERATE
+                </div>
+                <div class="display-footer">
+                    <span> Length: <span id="displayLength">16</span></span>
+                    <span> Type: <span id="displayType">MIXED</span></span>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <div class="control-section">
+                    <label class="control-label">  LENGTH</label>
+                    <div class="range-container">
+                        <input type="range" id="lengthRange" min="4" max="256" value="16" class="cyber-slider">
+                        <span class="length-display" id="lengthDisplay">16</span>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <label class="control-label">  CHARACTER SET</label>
+                    <div class="checkbox-grid">
+                        <label class="cyber-checkbox">
+                            <input type="checkbox" id="uppercase" checked>
+                            <span class="checkbox-label">UPPERCASE (A-Z)</span>
+                        </label>
+                        <label class="cyber-checkbox">
+                            <input type="checkbox" id="lowercase" checked>
+                            <span class="checkbox-label">lowercase (a-z)</span>
+                        </label>
+                        <label class="cyber-checkbox">
+                            <input type="checkbox" id="numbers" checked>
+                            <span class="checkbox-label">NUMBERS (0-9)</span>
+                        </label>
+                        <label class="cyber-checkbox">
+                            <input type="checkbox" id="special" checked>
+                            <span class="checkbox-label">SPECIAL (!@#$%^)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="strength-analyzer">
+                    <div class="analyzer-header">
+                        <span class="analyzer-title">STRENGTH ANALYSIS</span>
+                        <span class="analyzer-value" id="strengthValue">---</span>
+                    </div>
+                    <div class="strength-bar-container">
+                        <div class="strength-bar" id="strengthBar"></div>
+                    </div>
+                    <div class="entropy-display">
+                        <span>ENTROPY: <span id="entropyValue">0</span> bits</span>
+                        <span>CRACK TIME: <span id="crackTime">--</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-panel">
+            <button class="btn btn-primary" id="generateBtn">
+                >> GENERATE <<
+            </button>
+            <button class="btn btn-secondary" id="copyBtn">
+                [ COPY ]
+            </button>
+            <button class="btn btn-secondary" id="shareBtn">
+                [ SHARE ]
+            </button>
+        </div>
+
+        <div class="status-bar">
+            <span id="statusMessage">  READY</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
