@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Memory Card Game - Test your memory and match all pairs!">
+    <meta name="keywords" content="memory game, card game, matching game, web game">
+    <title>Memory Card Game - Match All Pairs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Memory Card Game</h1>
+            <p class="subtitle">Find all matching pairs!</p>
+        </div>
+
+        <div class="controls">
+            <div class="difficulty-selector">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy (4x4)</option>
+                    <option value="medium">Medium (4x6)</option>
+                    <option value="hard">Hard (6x6)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span>Attempts:</span>
+                <span id="attempts">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Matches:</span>
+                <span id="matches">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Time:</span>
+                <span id="timer">0s</span>
+            </div>
+            <div class="stat-item">
+                <span>Best Time:</span>
+                <span id="bestTime">--</span>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div id="victoryScreen" class="victory-screen hidden">
+            <div class="victory-content">
+                <h2>🎉 Congratulations!</h2>
+                <p>You matched all pairs!</p>
+                <p>Time: <span id="finalTime">0</span>s</p>
+                <p>Attempts: <span id="finalAttempts">0</span></p>
+                <button class="btn" id="playAgainBtn">Play Again</button>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" id="resetBtn">New Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

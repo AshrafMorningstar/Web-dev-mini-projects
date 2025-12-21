@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Snake Game - Classic arcade game built with JavaScript">
+    <meta name="keywords" content="snake game, arcade, web game, canvas game">
+    <title>Snake Game - Classic Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐍 Snake Game</h1>
+            <p class="subtitle">Eat food, grow, and avoid obstacles!</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="slow">Slow</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="fast">Fast</option>
+                    <option value="ultra">Ultra</option>
+                </select>
+            </div>
+            <button id="pauseBtn" class="btn btn-secondary">Pause</button>
+        </div>
+
+        <div class="game-info">
+            <div class="info-item">
+                <span>Score:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="info-item">
+                <span>High Score:</span>
+                <span id="highScore">0</span>
+            </div>
+            <div class="info-item">
+                <span>Level:</span>
+                <span id="level">1</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div id="gameOverScreen" class="game-over-screen hidden">
+            <div class="game-over-content">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>High Score: <span id="finalHighScore">0</span></p>
+                <button id="restartBtn" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p>🎮 Arrow Keys or WASD to move | SPACE to pause | R to restart</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
