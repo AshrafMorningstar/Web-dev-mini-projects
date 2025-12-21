@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI'; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+.container { max-width: 500px; width: 100%; background: white; border-radius: 15px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center; }
+h1 { color: #e91e63; margin-bottom: 20px; }
+p { color: #666; margin-bottom: 20px; }
+.game { margin-bottom: 30px; }
+input { width: 100%; padding: 12px; border: 2px solid #ecf0f1; border-radius: 8px; font-size: 1em; margin-bottom: 10px; }
+input:focus { outline: none; border-color: #e91e63; }
+.btn { padding: 12px 30px; background: #e91e63; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; margin-bottom: 10px; width: 100%; }
+.btn:hover { background: #c2185b; }
+.btn.secondary { background: #2196f3; }
+.btn.secondary:hover { background: #1976d2; }
+.result { padding: 15px; margin: 15px 0; border-radius: 8px; font-weight: bold; }
+.result.correct { background: #c8e6c9; color: #2e7d32; }
+.result.incorrect { background: #ffcdd2; color: #c62828; }
+.info { color: #666; }
